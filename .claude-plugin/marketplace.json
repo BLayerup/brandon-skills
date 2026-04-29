@@ -10,7 +10,11 @@
   "plugins": [
     {
       "name": "cowork-prefs",
-      "description": "Brandon's personal Claude/Cowork preferences. Currently includes the conversational-questioning skill (caps AskUserQuestion at 1 question per round by default)."
+      "description": "Brandon's personal Claude/Cowork preferences. Currently includes the conversational-questioning skill (caps AskUserQuestion at 1 question per round by default).",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/BLayerup/brandon-skills.git"
+      }
     }
   ]
 }
