@@ -12,8 +12,9 @@
       "name": "cowork-prefs",
       "description": "Brandon's personal Claude/Cowork preferences. Currently includes the conversational-questioning skill (caps AskUserQuestion at 1 question per round by default).",
       "source": {
-        "source": "url",
-        "url": "https://github.com/BLayerup/brandon-skills.git"
+        "source": "github",
+        "repo": "BLayerup/brandon-skills",
+        "commit": "f9964c24bfa22d98a812ecc76aea4824ae929074"
       }
     }
   ]
