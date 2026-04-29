@@ -10,7 +10,6 @@
   "plugins": [
     {
       "name": "cowork-prefs",
-      "source": ".",
       "description": "Brandon's personal Claude/Cowork preferences. Currently includes the conversational-questioning skill (caps AskUserQuestion at 1 question per round by default)."
     }
   ]
