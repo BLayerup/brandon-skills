@@ -1,0 +1,16 @@
+{
+  "name": "brandon-skills",
+  "version": "0.1.0",
+  "description": "Brandon Johnwell's personal Claude/Cowork skills. Codifies preferences for clarification, writing style, and project handling across Layer Up Studio, federal work, and personal contexts.",
+  "author": {
+    "name": "Brandon Johnwell",
+    "email": "brandon@layerupstudio.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "cowork",
+    "skills",
+    "personal"
+  ]
+}
