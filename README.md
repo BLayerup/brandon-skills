@@ -1,20 +1,29 @@
 # brandon-skills
 
-Personal Claude / Cowork skills.
+Personal Claude / Cowork plugin marketplace.
 
-## Skills included
+## Marketplace
+
+- **brandon-skills** (this repo) — marketplace container.
+
+## Plugins
+
+- **cowork-prefs** — Brandon's personal Claude/Cowork preferences.
+
+## Skills inside cowork-prefs
 
 - **conversational-questioning** — caps `AskUserQuestion` calls at 1 question per round by default (2 when tightly coupled, 3 max, never 4). Designed to make clarification feel like a conversation rather than a survey.
 
 ## Install
 
-From inside Cowork or Claude Code:
+Two steps from inside Claude Code or Cowork:
 
 ```
-/plugin install <github-user>/<repo-name>
+/plugin marketplace add <github-user>/<repo-name>
+/plugin install cowork-prefs@brandon-skills
 ```
 
-Replace `<github-user>/<repo-name>` with the path to wherever this repo is hosted.
+Replace `<github-user>/<repo-name>` with the GitHub path to this repo (for example, `BLayerup/brandon-skills`).
 
 ## Add a new skill
 

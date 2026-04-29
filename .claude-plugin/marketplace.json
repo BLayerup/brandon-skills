@@ -1,0 +1,17 @@
+{
+  "name": "brandon-skills",
+  "owner": {
+    "name": "Brandon Johnwell",
+    "email": "brandon@layerupstudio.com"
+  },
+  "metadata": {
+    "description": "Personal Claude/Cowork plugin marketplace for Brandon Johnwell. Holds plugins that codify writing, clarification, and project preferences."
+  },
+  "plugins": [
+    {
+      "name": "cowork-prefs",
+      "source": ".",
+      "description": "Brandon's personal Claude/Cowork preferences. Currently includes the conversational-questioning skill (caps AskUserQuestion at 1 question per round by default)."
+    }
+  ]
+}
