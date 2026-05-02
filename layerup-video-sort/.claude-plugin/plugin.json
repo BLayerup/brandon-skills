@@ -1,0 +1,18 @@
+{
+  "name": "layerup-video-sort",
+  "version": "0.1.0",
+  "description": "Sort and organize unedited Layer Up phone videos from ~/Downloads into Drafts/ topic folders, with a per-folder CapCut AI Clipper prompt. Layer Up taxonomy and brand defaults baked in.",
+  "author": {
+    "name": "Brandon Johnwell",
+    "email": "brandon@layerupstudio.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "cowork",
+    "layer-up",
+    "video",
+    "capcut",
+    "content"
+  ]
+}

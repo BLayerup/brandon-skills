@@ -14,7 +14,16 @@
       "source": {
         "source": "github",
         "repo": "BLayerup/brandon-skills",
-        "commit": "ba03e48"
+        "path": "cowork-prefs"
+      }
+    },
+    {
+      "name": "layerup-video-sort",
+      "description": "Sort and organize unedited Layer Up phone videos from ~/Downloads into Drafts/ topic folders, with a per-folder CapCut AI Clipper prompt. Layer Up taxonomy and brand defaults baked in.",
+      "source": {
+        "source": "github",
+        "repo": "BLayerup/brandon-skills",
+        "path": "layerup-video-sort"
       }
     }
   ]
