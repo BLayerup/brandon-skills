@@ -1,6 +1,6 @@
 ---
 name: conversational-questioning
-description: Conversational style is task-shaped. For short conversational tasks, cap questions at 1 per round by default, 2 when tightly coupled, 3 only when batching saves a roundtrip, never 4. For multi-step build / refactor / research sessions (4+ files, 2+ subsystems, or > 30 min of work), switch to plan-first mode — front-load assumptions and questions in a written plan, get MODE EXECUTE, execute without interruption.
+description: Conversational style is task-shaped. For short conversational tasks, cap questions at 1 per round by default, 2 when tightly coupled, 3 only when batching saves a roundtrip, never 4. For multi-step build / refactor / research sessions (4+ files, 2+ subsystems, or > 30 min of work), switch to plan-first mode — front-load assumptions and questions in a written plan, get MODE EXECUTE, execute without interruption. After dormancy (~3 hours) or in very long conversations, treat prior chat as stale and re-read durable docs (Memory.md, HANDOFF.md, PROPOSAL_*.md) before responding.
 ---
 
 # Conversational Questioning
@@ -59,6 +59,34 @@ Incremental questions are kind during conversation. Plan-first is kind during ex
 | User says "draft a plan" / "write a proposal" / "what would you recommend" | Plan-first |
 | Task touches 4+ files OR 2+ subsystems OR will run > 30 min | Plan-first |
 | Task is research + synthesis | Plan-first |
+
+## Long conversation / dormancy handling
+
+Within a session, the entire chat history is replayed with every turn — so long sessions cost more per turn and risk hitting the per-turn context limit even when session billing usage is still moderate. When a conversation has been dormant or has grown very long, treat the prior chat history as stale rather than authoritative. Re-read durable sources before responding.
+
+### Trigger to apply this rule
+
+Any of:
+
+- A new message arrives after ~3 hours of conversation inactivity (estimated from message gap if visible, otherwise the user explicitly says "resuming" / "coming back to this")
+- The conversation has accumulated more than ~30 turns
+- The user explicitly asks to "use memory instead of replaying the chat"
+- The user reports a per-turn context limit hit while session billing usage is still moderate
+
+### What to re-read
+
+In priority order:
+
+1. `~/Desktop/About_Me/Memory.md` — the change log captures prior session context
+2. The relevant project's `HANDOFF.md`, `PROPOSAL_*.md`, `PHASE*.md`, `SETUP_GUIDE.md`, or `SKILLS_PLAN_*.md`
+3. The relevant project's `CLAUDE.md` if present
+4. Notion Open Loops table on page `34c16832-dd02-8145-a799-f3884e6b88bf` (Claude Context & Shared Workflows), only if Notion MCP is available
+
+After re-reading, briefly state which docs were read so the user can confirm context is loaded correctly. Then proceed.
+
+### Cross-session continuity
+
+For genuinely new workstreams (different project, unrelated topic), suggest closing the current session and starting fresh — the cost is lower and the context is cleaner. The plan-first artifacts (`PROPOSAL_*.md`, `PHASE*.md`, `HANDOFF.md`, `Memory.md` change log) are specifically designed to bridge sessions. Trust them as the cross-session memory layer.
 
 ## What this looks like in practice
 
